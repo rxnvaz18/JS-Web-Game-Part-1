@@ -1,3 +1,4 @@
+/adding function for image position and adding onto the page/ 
 
 function newImage(url, left, bottom) {
     let object = document.createElement('img')
@@ -8,6 +9,8 @@ function newImage(url, left, bottom) {
     document.body.append(object)
     return object
 }
+// append at the end of previous line before return makes sure images appear on page
+// return object does not seem to be necessary? 
 
 function newItem(url, left, bottom) {
     let object = newImage(url, left, bottom)
@@ -16,6 +19,7 @@ function newItem(url, left, bottom) {
         object.remove()
     })
 }
+// end of event listener that removes object after user dbl clicks
 
 newImage('assets/green-character.gif',100,100)
 newImage('assets/tree.png',200,300)
@@ -27,3 +31,5 @@ newImage('assets/well.png',500,425)
 newItem('assets/sword.png',500, 405)
 newItem('assets/shield.png',165, 185)
 newItem('assets/staff.png',600, 100)
+
+// end of adding images to page
