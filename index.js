@@ -33,3 +33,12 @@ newItem('assets/shield.png',165, 185)
 newItem('assets/staff.png',600, 100)
 
 // end of adding images to page
+
+// start of bonus in trying to add backrgound images
+
+const background = ['assets/sky.png','assets/grass.png']
+
+for (let i = 0; i < background.length; i++) {
+    document.body.append(background)
+}
+// failed to do background bonus portion
