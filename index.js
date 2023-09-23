@@ -1,4 +1,4 @@
-/adding function for image position and adding onto the page/ 
+// adding function for image position and adding onto the page
 
 function newImage(url, left, bottom) {
     let object = document.createElement('img')
