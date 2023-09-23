@@ -41,4 +41,6 @@ const background = ['assets/sky.png','assets/grass.png']
 for (let i = 0; i < background.length; i++) {
     document.body.append(background)
 }
+// window.innerWidth is 1800
+// window.innerHeight is 957
 // failed to do background bonus portion
