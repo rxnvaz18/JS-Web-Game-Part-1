@@ -1,6 +1,21 @@
+// start of bonus in trying to add backrgound images
+// Start of for loops for looping background images
+for (let height = 5 ; height <= 957 / 100; height++) {
+    for (let width = 0; width <=1800 / 100; width++) {
+        newFeature(`assets/sky.png`, 0 + width * 100, 0 + height * 100)
+    }
+}
+
+for (let height = 0 ; height <= 400 / 100; height++) {
+    for (let width = 0; width <=1800 / 100; width++) {
+        newFeature(`assets/grass.png`, 0 + width * 100, 0 + height * 100)
+    }
+}
+// window.innerWidth is 1800
+// window.innerHeight is 957
 // adding function for image position and adding onto the page
 
-function newImage(url, left, bottom) {
+function newFeature(url, left, bottom) {
     let object = document.createElement('img')
     object.src = url
     object.style.position = 'fixed'
@@ -10,10 +25,9 @@ function newImage(url, left, bottom) {
     return object
 }
 // append at the end of previous line before return makes sure images appear on page
-// return object does not seem to be necessary? 
 
-function newItem(url, left, bottom) {
-    let object = newImage(url, left, bottom)
+function newThing(url, left, bottom) {
+    let object = newFeature(url, left, bottom)
 
     object.addEventListener('dblclick',()=> {
         object.remove()
@@ -21,26 +35,17 @@ function newItem(url, left, bottom) {
 }
 // end of event listener that removes object after user dbl clicks
 
-newImage('assets/green-character.gif',100,100)
-newImage('assets/tree.png',200,300)
-newImage('assets/pillar.png',350,100)
-newImage('assets/pine-tree.png',450,200)
-newImage('assets/crate.png',150,200)
-newImage('assets/well.png',500,425)
+newFeature('assets/green-character.gif',100,100)
+newFeature('assets/tree.png',200,300)
+newFeature('assets/pillar.png',350,100)
+newFeature('assets/pine-tree.png',450,200)
+newFeature('assets/crate.png',150,200)
+newFeature('assets/well.png',500,425)
 
-newItem('assets/sword.png',500, 405)
-newItem('assets/shield.png',165, 185)
-newItem('assets/staff.png',600, 100)
+newThing('assets/sword.png',500, 405)
+newThing('assets/shield.png',165, 185)
+newThing('assets/staff.png',600, 100)
 
 // end of adding images to page
 
-// start of bonus in trying to add backrgound images
 
-const background = ['assets/sky.png','assets/grass.png']
-
-for (let i = 0; i < background.length; i++) {
-    document.body.append(background)
-}
-// window.innerWidth is 1800
-// window.innerHeight is 957
-// failed to do background bonus portion
